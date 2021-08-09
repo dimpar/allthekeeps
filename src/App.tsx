@@ -59,7 +59,10 @@ function AppInternal() {
 
   let url: string;
   if (isRopsten) {
-    url = 'api.thegraph.com/subgraphs/name/miracle2k/all-the-keeps-ropsten';
+    const {REACT_APP_SUBGRAPH_API} = process.env
+    let urlRaw = (REACT_APP_SUBGRAPH_API as string)
+    let urlToParse = (urlRaw.split(' ').pop() as string)
+    url = (urlToParse.split('\u001b')[0]).replace("https://", "")
   }
   else {
     // DEV:

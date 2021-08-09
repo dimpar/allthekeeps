@@ -1,0 +1,3 @@
+[submodule "keep-subgraph"]
+	path = keep-subgraph
+	url = https://github.com/keep-network/keep-subgraph.git

@@ -30,7 +30,8 @@ export function useNetwork(): Network {
 }
 
 export function useIsRopsten(): boolean {
-  return useNetwork() == Network.ROPSTEN;
+  // return useNetwork() == Network.ROPSTEN;
+  return true;
 }
 
 export function useEtherscanDomain(): string {
